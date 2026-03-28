@@ -1,0 +1,57 @@
+/* Basic page setup: background color and font */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0ad9cf; /* Light greenish-blue background */
+    color: #333333; /* Dark gray text */
+    margin: 0;
+    padding: 20px;
+}
+
+/* Layout adjustment: Centers the content in a neat white box */
+.container {
+    max-width: 600px;
+    margin: 0 auto; 
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Heading color */
+h1 {
+    color: #00695c; /* Dark teal */
+}
+
+/* Image styling so it doesn't overflow the box */
+img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* Link styling */
+a {
+    color: #1808a3cd;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Button styling: colors, spacing, and hover effects */
+button {
+    background-color: #082fae;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #00695c;
+}
