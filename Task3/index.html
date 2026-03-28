@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 3: Advanced JS & Styling</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Week 3: Advanced JavaScript</h1>
+    </header>
+
+    <main class="container">
+        
+        <section class="card" id="quiz-section">
+            <h2>CS & Web Dev Quiz</h2>
+            <div id="quiz-container">
+                <p id="question-text">Loading question...</p>
+                <div id="options-container">
+                    </div>
+            </div>
+            <p id="quiz-result" class="hidden"></p>
+            <button id="next-btn" class="hidden">Next Question</button>
+        </section>
+
+        <section class="card" id="api-section">
+            <h2>Take a Break: Programming Joke</h2>
+            <div id="joke-container">
+                <p id="joke-setup">Click the button to fetch a joke from the web!</p>
+                <p id="joke-punchline" class="hidden"></p>
+            </div>
+            <button id="fetch-joke-btn">Fetch New Joke</button>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,160 @@
+/* --- Base Styles & Reset --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    /* Smooth scrolling for anchor links */
+    scroll-behavior: smooth; 
+}
+
+/* --- Typography & Colors --- */
+:root {
+    --primary-color: #2b2d42;
+    --accent-color: #ef233c;
+    --text-light: #edf2f4;
+}
+
+/* --- Layout Components --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 1rem 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease-in-out; /* Optimized transition */
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+
+.hero {
+    background: linear-gradient(rgba(43, 45, 66, 0.8), rgba(43, 45, 66, 0.8)), url('https://picsum.photos/1200/400') center/cover;
+    color: white;
+    text-align: center;
+    padding: 4rem 1rem;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+}
+
+/* --- Mobile-First Grid System --- */
+.grid-layout {
+    display: grid;
+    /* 1 column on mobile */
+    grid-template-columns: 1fr; 
+    gap: 2rem;
+}
+
+/* Tablet & Desktop View */
+@media (min-width: 768px) {
+    .grid-layout {
+        /* Automatically fits as many 250px columns as possible */
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
+/* --- Product Cards --- */
+.product-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+    padding-bottom: 1.5rem;
+    transition: transform 0.2s;
+    /* Cross-browser webkit support for older safari */
+    -webkit-transition: transform 0.2s; 
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    background-color: #eee; /* Placeholder color while loading */
+}
+
+.product-info {
+    padding: 1rem;
+}
+
+.price {
+    color: var(--accent-color);
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+}
+
+.add-to-cart-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #1a1c29;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+}

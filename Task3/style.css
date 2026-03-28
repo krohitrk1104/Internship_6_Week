@@ -1,0 +1,108 @@
+/* --- MOBILE FIRST BASE STYLES --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e8f5e9; /* Light green background */
+    color: #2e7d32;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #1b5e20; /* Dark green */
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+}
+
+/* Stacks items vertically on phones */
+.container {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column; 
+    gap: 1.5rem;
+}
+
+.card {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+h2 {
+    margin-bottom: 1rem;
+    color: #1b5e20;
+    border-bottom: 2px solid #a5d6a7;
+    padding-bottom: 0.5rem;
+}
+
+button {
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.2rem;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-top: 1rem;
+    width: 100%; /* Full width buttons on mobile */
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #1b5e20;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Specific styling for quiz answer buttons */
+.option-btn {
+    display: block;
+    width: 100%;
+    margin-bottom: 0.5rem;
+    background-color: #c8e6c9;
+    color: #1b5e20;
+    text-align: left;
+}
+
+.option-btn:hover {
+    background-color: #a5d6a7;
+}
+
+#joke-punchline {
+    margin-top: 1rem;
+    font-weight: bold;
+    color: #d32f2f; /* Make punchline stand out */
+}
+
+/* --- STEP 1: MEDIA QUERIES FOR LARGER SCREENS --- */
+
+/* Tablet View (Screens 600px and wider) */
+@media (min-width: 600px) {
+    .container {
+        padding: 2.5rem;
+    }
+    button {
+        width: auto; /* Buttons shrink to fit their text */
+    }
+}
+
+/* Desktop View (Screens 900px and wider) */
+@media (min-width: 900px) {
+    .container {
+        flex-direction: row; /* Changes from stacked vertical to side-by-side! */
+        align-items: flex-start;
+        max-width: 1200px;
+        margin: 0 auto; /* Centers the whole container */
+    }
+    .card {
+        flex: 1; /* Both cards take up equal 50% width */
+    }
+}

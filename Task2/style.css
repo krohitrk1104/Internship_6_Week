@@ -1,0 +1,142 @@
+/* Basic Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+}
+
+/* --- STEP 3: FLEXBOX NAVIGATION --- */
+.navbar {
+    display: flex; /* Makes the navbar a flex container */
+    justify-content: space-between; /* Pushes logo to left, links to right */
+    align-items: center; /* Vertically centers the items */
+    background-color: #2c3e50;
+    color: white;
+    padding: 1rem 2rem;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem; /* Spaces out the links */
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* --- STEP 3: CSS GRID CONTENT AREA --- */
+.grid-container {
+    display: grid;
+    gap: 2rem;
+    padding: 2rem;
+    grid-template-columns: 1fr; /* Defaults to 1 column for mobile screens */
+}
+
+/* Media Query: If screen is wider than 768px, switch to 2 columns */
+@media (min-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr 1fr; 
+    }
+}
+
+/* General Styling for both sections to look like cards */
+.card {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+h2 {
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
+}
+
+/* --- STEP 1: FORM STYLING --- */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #2ecc71;
+}
+
+/* Validation Text Styling */
+.error {
+    color: #e74c3c;
+    font-size: 0.85rem;
+    display: block;
+    margin-top: 0.3rem;
+}
+
+.success {
+    color: #27ae60;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+.hidden {
+    display: none;
+}
+
+/* --- STEP 4: TO-DO LIST STYLING --- */
+.todo-input-area {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+#taskList {
+    list-style: none;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ecf0f1;
+    padding: 0.8rem;
+    margin-bottom: 0.5rem;
+    border-radius: 4px;
+}
+
+.delete-btn {
+    background-color: #e74c3c;
+    padding: 0.4rem 0.8rem;
+}
+
+.delete-btn:hover {
+    background-color: #c0392b;
+}

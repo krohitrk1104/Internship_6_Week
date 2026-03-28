@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhishek's Portfolio & Projects</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Abhishek.Dev</div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#notes-section">Notes App</a></li>
+            <li><a href="#store-section">Showcase</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header id="about" class="hero-section">
+        <h1>Hi, I'm Abhishek Kumar</h1>
+        <p>A Computer Science student passionate about Web Development, React, and Data Structures & Algorithms.</p>
+    </header>
+
+    <main class="container">
+        
+        <section id="notes-section" class="card">
+            <h2>Quick Notes (Local Storage)</h2>
+            <p class="subtitle">These notes will save to your browser and stay even if you refresh!</p>
+            
+            <div class="input-group">
+                <input type="text" id="noteInput" placeholder="Type a note...">
+                <button id="addNoteBtn">Save Note</button>
+            </div>
+            <ul id="notesList"></ul>
+        </section>
+
+        <section id="store-section" class="card">
+            <h2>My Favorite Things Showcase</h2>
+            
+            <div class="controls">
+                <div class="filter-group">
+                    <label for="categoryFilter">Filter by:</label>
+                    <select id="categoryFilter">
+                        <option value="all">All Categories</option>
+                        <option value="tech">Tech & Coding</option>
+                        <option value="anime">Anime Merch</option>
+                    </select>
+                </div>
+                
+                <div class="sort-group">
+                    <label for="sortOrder">Sort by:</label>
+                    <select id="sortOrder">
+                        <option value="default">Default</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="rating">Top Rated</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="productGrid" class="grid-layout"></div>
+        </section>
+
+    </main>
+
+    <footer id="contact">
+        <h2>Let's Connect</h2>
+        <p>Email me at: contact@example.com</p>
+        <p>© 2026 Abhishek Kumar</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
